@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="463.0" prefWidth="704.0" stylesheets="@../styles/MainPlayerStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPlayer.MainPlayerFXMLController">
+   <bottom>
+      <VBox fx:id="bottompane" prefHeight="66.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="0.0" prefWidth="596.0">
+               <children>
+                  <Button defaultButton="true" focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonOpen" text="Open">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonPlay" text="Play">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonPause" text="Pause">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonStop" text="Stop">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin></Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonSkipBackwards" text="&lt;&lt;">
+                     <HBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonRateDown" text="&lt;">
+                     <HBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonRateUp" text="&gt;">
+                     <HBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button focusTraversable="false" mnemonicParsing="false" onAction="#handleButtonSkipForward" text="&gt;&gt;">
+                     <HBox.margin>
+                        <Insets bottom="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Slider fx:id="slider" focusTraversable="false" prefHeight="16.0" prefWidth="124.0">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="20.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Slider>
+                  <Button mnemonicParsing="false" onAction="#handleButtonFullscreen" text="2x click for Full screen" />
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="29.0" prefWidth="600.0">
+               <children>
+                  <Slider fx:id="seekslider" focusTraversable="false" max="10.0" prefHeight="29.0" prefWidth="597.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </HBox.margin>
+                  </Slider>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </bottom>
+   <center>
+      <StackPane prefHeight="386.0" prefWidth="707.0" stylesheets="@../styles/MainPlayerStyle.css" BorderPane.alignment="CENTER">
+         <children>
+            <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" />
+         </children>
+      </StackPane>
+   </center>
+</BorderPane>
